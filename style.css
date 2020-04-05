@@ -1,0 +1,42 @@
+.cit {
+  font-style: italic;
+}
+.bold {
+  font-weight: bold;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.name {
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+h1,
+h2,
+h3 {
+  text-transform: capitalize;
+  text-align: center;
+}
+.spoiler {
+  color: red;
+}
+.pro-cons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  list-style: none;
+}
+.pro-cons li {
+  list-style-type: none;
+}
+.pro {
+  background-color: steelblue;
+  box-shadow: 2px 2px black;
+}
+.cons {
+  background-color: tomato;
+  box-shadow: 2px 2px black;
+}
+footer {
+  text-align: center;
+}
