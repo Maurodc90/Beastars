@@ -3,7 +3,33 @@
 Body 
 ========================
 */
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75)),
+    url(./image/B-bakground.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+.review {
+  padding: 1rem;
+  margin: 1rem;
+  color: white;
+}
+/* 
+========================
+Logo Styling
+========================
+*/
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 /* 
 ========================
 Text Styling
@@ -48,17 +74,26 @@ Pro Cons
 .pro-cons {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  list-style: none;
+  margin: auto;
+  padding: 0.5rem;
+  max-width: 450px;
+  max-height: 115px;
+}
+@media screen and (min-width: 576px) {
+  .pro-cons {
+    grid-gap: 2rem;
+    font-size: 1rem;
+  }
 }
 .pro-cons li {
   list-style-type: none;
 }
 .pro {
-  background-color: steelblue;
+  background-color: #2f52e0;
   box-shadow: 2px 2px black;
 }
 .cons {
-  background-color: tomato;
+  background-color: #ff715b;
   box-shadow: 2px 2px black;
 }
 /* 
@@ -67,11 +102,35 @@ Footer
 ========================
 */
 
-footer {
+.footer {
   text-align: center;
+  background-color: #4c5b5c;
+  margin-bottom: auto;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "a a a"
+    "b c d";
 }
 footer a {
   color: black;
-  font-size: large;
+  font-size: 2rem;
   letter-spacing: 1rem;
+  padding-bottom: 2rem;
+}
+.copy {
+  grid-area: a;
+  font-size: 1.2rem;
+}
+.insta {
+  grid-area: b;
+}
+.twitter {
+  grid-area: c;
+}
+.face {
+  grid-area: d;
 }
